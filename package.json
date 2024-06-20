@@ -1,0 +1,46 @@
+{
+  "name": "etl-socket",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev:socket": "nodemon --exec babel-node server/index.js",
+    "build:socket": "rimraf dist/ && babel ./server --out-dir ./dist --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start:socket": "node dist/index.js",
+    "seed:socket": "babel-node seed/seeder.js > logs.log"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-node": "^0.0.1-security",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.34",
+    "mongoose": "^5.12.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "net": "^1.0.2",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.7.2",
+    "numeral": "^2.0.6",
+    "portscanner": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "sequelize": "^6.3.5",
+    "socket.io": "^4.0.0",
+    "sync-request": "^6.1.0",
+    "tedious": "^9.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "faker": "^5.4.0",
+    "nodemon": "^2.0.7"
+  }
+}
